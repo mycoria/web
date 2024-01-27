@@ -17,6 +17,9 @@
   /* Link color */
   --md-typeset-a-color:              var(--md-accent-bg-color);
 
+  /* Mark color */
+  --md-typeset-mark-color:           #9fb62c69;
+
   /* Code Blocks & Syntax Highlighting */
   --md-code-fg-color: #c6c6c4;
   --md-code-fg-color--light: #9c9a9a;

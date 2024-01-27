@@ -1,23 +1,25 @@
-# Mycoria
+![Mycoria Logo](/assets/logo/icon_transp_bg.png){ width="150" align=right }
 
-Mycoria gives you the connectivity freedom of the original Internet.
+# __Mycoria__
 
-- Everyone is equal: Easily connect to anyone.
-- Everyone is welcome: Open network without bureaucracy.
-- No spooking: Everthing is authenticated.
-- No surveillance: Everything is encrypted. (+ Private Addresses!)
-- No barriers: Connect via the Internet or extend Mycoria with your own mesh.
+Mycoria is an open and secure overlay network that connects all participants. It values freedom of connectivity and aims to imitate the curious and adventurous spirit of the early Internet:
+
+- ==Everyone is equal==: Easily connect to anyone
+- ==Everyone is welcome==: Open network without bureaucracy
+- No spooking: Everthing is authenticated
+- No surveillance: Everything is encrypted (+ Private Addresses!)
+- No barriers: Connect via the Internet or extend Mycoria with your own mesh
 
 ### Design Goals
 
 - Keep it small and simple
 - Compatible with existing infrastructure (eg. DNS)
-- Secure by default
+- ==Secure by default==
 - Private by default (WIP)
 
 ### Features
 
-- Automatic end-to-end encryption
+- ==Automatic end-to-end encryption==
 - Modern cryptography
 - Smart and scalable routing (partly WIP)
 - Resolve .myco DNS (OS configuration required)
