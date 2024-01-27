@@ -6,7 +6,7 @@ _We haven't packaged Mycoria yet for any platform. If you want help out, it is m
 
 ## Manual Install
 
-### Linux
+### Linux (amd64)
 
 ``` sh
 # Create directory and download binary.
@@ -15,13 +15,18 @@ wget https://github.com/mycoria/mycoria/releases/download/v0.0.1/mycoria_linux_a
 chmod +x /opt/mycoria/mycoria
 
 # Generate config file.
-/opt/mycoria/mycoria config generate XX # Replace XX with your country code.
+/opt/mycoria/mycoria config generate XX | tee /opt/mycoria/config.yaml # Replace XX with your country code.
 
 # Install and enable systemd service
-curl https://raw.githubusercontent.com/mycoria/mycoria/master/packaging/mycoria.service | sudo tee 
-systemctl enable mycoria
-systemctl start mycoria
-journalctl -fu mycoria
+curl https://raw.githubusercontent.com/mycoria/mycoria/master/packaging/mycoria.service | sudo tee /etc/systemd/system/mycoria.service
+systemctl enable mycoria # Start at boot.
+systemctl start mycoria # Start now.
+journalctl -fu mycoria # Live-view logs.
 ```
 
-_Why does Mycoria need your country code? [It helps with routing scalability.](/concept/)_
+!!! info "Why does Mycoria need your country code?"
+
+    It's a vital part of the scalable routing concept.  
+    [Read more about it here.](/concept/#scalable-routing)
+    
+    If you pick an incorrect one, it will undermine _your_ routing performance.
