@@ -12,6 +12,7 @@ repo_url: 'https://github.com/mycoria/mycoria'
 nav:
   - Introduction: index.md
   - Concept: concept.md
+  - Quick Start: quick-start.md
   - Install: install.md
   - Configure: configure.md
   - About: about.md

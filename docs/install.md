@@ -6,6 +6,8 @@ _We haven't packaged Mycoria yet for any platform. If you want help out, it is m
 
 ## Manual Install
 
+!!! tip "More platforms coming soon!"
+
 ### Linux (amd64)
 
 ``` sh
@@ -24,7 +26,7 @@ systemctl start mycoria # Start now.
 journalctl -fu mycoria # Live-view logs.
 ```
 
-!!! info "Why does Mycoria need your country code?"
+!!! info "Why does Mycoria need my country code?"
 
     It's a vital part of the scalable routing concept.  
     [Read more about it here.](/concept/#scalable-routing)

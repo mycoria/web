@@ -6,7 +6,7 @@ If you do not have a config file yet, get the default config, including an ID, w
 mycoria config generate XX # Replace XX with your country code.
 ```
 
-!!! info "Why does Mycoria need your country code?"
+!!! info "Why does Mycoria need my country code?"
 
     It's a vital part of the scalable routing concept.  
     [Read more about it here.](/concept/#scalable-routing)
