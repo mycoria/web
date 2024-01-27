@@ -6,7 +6,12 @@ If you do not have a config file yet, get the default config, including an ID, w
 mycoria config generate XX # Replace XX with your country code.
 ```
 
-_Why does Mycoria need your country code? [It helps with routing scalability.](/concept/)_
+!!! info "Why does Mycoria need your country code?"
+
+    It's a vital part of the scalable routing concept.  
+    [Read more about it here.](/concept/#scalable-routing)
+    
+    If you pick an incorrect one, it will undermine _your_ routing performance.
 
 Currently, there is just one simple yaml file that holds all configuration.  
 Here is an example with explanations:
@@ -30,7 +35,9 @@ router:
   universe: test
 
   # Set a secret that every router in your universe must know to connect.
-  # In case you want to stay alone. (The universe itself is not a secret.)
+  # In case you want to stay alone.
+  # While the universe name is shared in plain-text,
+  # the universe secret itself never leaves the router.
   universeSecret: correct horse battery stable
 
   # By default, Mycoria allows local traffic to any IP.
@@ -83,6 +90,7 @@ system:
 services:
 
 # This is a public service, any other Mycoria router can access it.
+# This service allows pinging and is added by default.
 - name: ping
   url: 'icmp6:'
   public: true
@@ -101,8 +109,8 @@ services:
   friends: true
   # Allow a list of router IPs or friend names.
   for:
-  - fd1f:2cf7:903:b50b:e4cb:5c4c:270e:360c
-  - frank
+  - fd1f:14ed:bc18:ecb1:af00:9a2d:2a76:201d
+  - alice
 
 # Choose your friends wisely.
 # Friends are used for simplified access control.
@@ -110,8 +118,10 @@ services:
 # You can only allow connections from friends to a service with "friends=true"
 # If you have setup your DNS for Mycoria, you can also resolve their names.
 friends:
-- name: frank # Resolves as frank.myco.
-  ip: fd1f:2cf7:903:b50b:e4cb:5c4c:270e:360c
+- name: alice # Resolves as alice.myco.
+  ip: fd1f:2cd5:6feb:7aa7:d674:1b3c:c82c:dfc
+- name: bob # Resolves as bob.myco.
+  ip: fd11:6e6d:b98a:538d:67e5:5244:8e98:9f6e
 
 # You can also add any custom names for resolving.
 # Be sure to point your DNS server at Mycoria for these records.

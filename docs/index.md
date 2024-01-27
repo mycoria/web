@@ -22,8 +22,8 @@ Mycoria gives you the connectivity freedom of the original Internet.
 - Smart and scalable routing (partly WIP)
 - Resolve .myco DNS (OS configuration required)
 - Rotating private addresses (WIP)
-- Dashboard
-- Auto-Optimization/Healing of Network (for Internet overlay)
-- Simple Service Discovery
+- Dashboard (WIP)
+- Auto-Optimization/Healing of Network (for Internet overlay) (WIP)
+- Simple Service Discovery (WIP)
 
 [Continue reading about the concept.](/concept/)
