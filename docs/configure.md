@@ -98,13 +98,13 @@ services:
 # You can also announce services for simple service discovery. (WIP)
 - name: Project Status
   description: Website that shows the status of my project.
-  url: 'tcp:80'
+  url: 'http:'
   public: true
   advertise: true
 
 # You can also allow services only for friends or a custom list of routers.
 - name: Secret Portal
-  url: 'tcp:81'
+  url: 'tcp://:81'
   # Allow all friends.
   friends: true
   # Allow a list of router IPs or friend names.
