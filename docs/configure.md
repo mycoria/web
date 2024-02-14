@@ -55,8 +55,8 @@ router:
   # Define to which routers this router should
   # always try to hold a connection to.
   connect:
-  - "8.9.10.11"
-  - example.org
+  - "tcp://8.9.10.11"
+  - "tcp://example.org"
 
   # Define on which ports (and protocols) the router listens.
   # Currently on tcp is supported, more will come. (WIP)
@@ -66,7 +66,6 @@ router:
   # Enable the router to choose automatically to which other
   # routers it connects. Routers will optimize their connections
   # based on measurements and estimated location.
-  # Not yet implemented, but please enable already. (WIP)
   autoConnect: true
   
   # If no other routers with public IANA IPs are known,
@@ -95,10 +94,10 @@ services:
   url: 'icmp6:'
   public: true
 
-# You can also announce services for simple service discovery. (WIP)
+# You can also announce services for simple service discovery.
 - name: Project Status
   description: Website that shows the status of my project.
-  url: 'http:'
+  url: 'http://my-project.myco/'
   public: true
   advertise: true
 

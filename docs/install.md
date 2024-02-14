@@ -2,18 +2,43 @@
 
 ## Packages
 
-_We haven't packaged Mycoria yet for any platform. If you want to help out, it is much appreciated._
+_We haven't packaged Mycoria yet for any platform. If you want to help out, it is much appreciated. Specifically, we are looking for help with packaging for Windows WinGet, .deb, .rpm and inclusion in Linux distros._
 
 ## Manual Install
 
-!!! tip "More platforms coming soon!"
+!!! tip "More platforms are planned, help is welcome!"
 
-### Linux (amd64)
+### Windows (amd64, arm64)
+
+Install with powershell as Admin:
+
+``` powershell
+# Go to destination where you want to install Mycoria
+
+# Download latest release
+Invoke-WebRequest -Uri "https://github.com/mycoria/mycoria/releases/latest/download/mycoria_windows_amd64.exe" -OutFile "mycoria.exe"
+# Or, download arm64 version:
+# Invoke-WebRequest -Uri "https://github.com/mycoria/mycoria/releases/latest/download/mycoria_windows_arm64.exe" -OutFile "mycoria.exe"
+
+# Generate config file.
+.\mycoria.exe config generate XX | Tee-Object -FilePath "config.yaml" # Replace XX with your country code.
+
+# Install and enable systemd service
+# WIP...
+```
+
+!!! info "Required Dependency for Windows"
+
+    Mycoria requires WinTun. [Download it here](https://www.wintun.net/) and place `wintun.dll` in the same directory as mycoria.exe
+
+### Linux (amd64, arm64)
 
 ``` sh
 # Create directory and download binary.
 mkdir /opt/mycoria
-wget https://github.com/mycoria/mycoria/releases/download/v0.0.1/mycoria_linux_amd64 -O /opt/mycoria/mycoria
+wget https://github.com/mycoria/mycoria/releases/latest/download/mycoria_linux_amd64 -O /opt/mycoria/mycoria
+# Or, download arm64 version:
+# wget https://github.com/mycoria/mycoria/releases/latest/download/mycoria_linux_arm64 -O /opt/mycoria/mycoria
 chmod +x /opt/mycoria/mycoria
 
 # Generate config file.
@@ -24,6 +49,12 @@ curl https://raw.githubusercontent.com/mycoria/mycoria/master/packaging/mycoria.
 systemctl enable mycoria # Start at boot.
 systemctl start mycoria # Start now.
 journalctl -fu mycoria # Live-view logs.
+
+# Check status
+# View router ID and version
+curl [fd00::b909]
+# View routing table
+curl [fd00::b909]/table
 ```
 
 !!! info "Why does Mycoria need my country code?"
