@@ -28,7 +28,7 @@ router:
     type: Ed25519
     public: 8919290ac6c7e815...
     private: 505f0dc9473cd22e...
-  
+
   # Define the "universe" the router is in.
   # Routers can only connect to other routers within the same universe.
   # You can use this to easily create own siloed Mycoria network.
@@ -62,16 +62,29 @@ router:
   # Currently on tcp is supported, more will come. (WIP)
   listen:
   - tcp:47369
-  
-  # Enable the router to choose automatically to which other
+
+# Enable the router to choose automatically to which other
   # routers it connects. Routers will optimize their connections
   # based on measurements and estimated location.
   autoConnect: true
-  
+
   # If no other routers with public IANA IPs are known,
   # connect to one of these to bootstrap.
   bootstrap:
   - tcp://bootstrap.mycoria.org:47369
+
+  # Runs the router in stub mode. It will not relay router announcements
+  # and will appear as a dead end to other routers.
+  stub: true
+
+  # Runs the router in lite mode. It will attempt to reduce any non-essential
+  # activity and traffic.
+  # Behavior will slightly change over time and also depends on other routers
+  # playing along - do not use for workarounds.
+  # Other routers will not send route announcements to lite routers, except if
+  # they are lite routers themselves. This way, a group of lite routers can
+  # live without the full routing table, but can't use source routing.
+  lite: true
 
 system:
   # Define the name of the tun interface.
