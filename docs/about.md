@@ -8,7 +8,7 @@ In a similar way, Mycoria forms a symbiotic relationship with the current Intern
 
 ## Team
 
-Daniel Hovie designed Mycoria and laid the groundwork. He was inspired by the [cjdns](https://github.com/cjdelisle/cjdns/) network as well as his previous work building the [Safing Privacy Network](https://github.com/safing/spn).
+Daniel Hååvi designed Mycoria and laid the groundwork. He was inspired by the [cjdns](https://github.com/cjdelisle/cjdns/) network as well as his previous work building the [Safing Privacy Network](https://github.com/safing/spn).
 
 Johannes Schabauer is working on bringing Mycoria into the world of IoT and embedded devices. He has lots of experience building and running [highly critical embedded sensor networks](https://doctec.at/) used for environmental monitoring and worker safety.
 
