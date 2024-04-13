@@ -29,3 +29,14 @@ Mycoria is an open and secure overlay network that connects all participants. It
 - Simple Service Discovery (WIP)
 
 [Continue reading about the concept.](/concept/)
+
+## Dashboard Impressions
+
+![Dashboard Overview](img/dashboard_overview.png)
+![Dashboard Overview Light](img/dashboard_overview_light.png)
+![Dashboard Discover](img/dashboard_discover.png)
+![Dashboard Domains](img/dashboard_domains.png)
+![Dashboard Routing Table](img/dashboard_routing_table.png)
+![Open New Domain](img/dashboard_open_new_domain.png)
+![Open Changed Domain](img/dashboard_open_changed_domain.png)
+![Open Reserved Domain](img/dashboard_open_reserved_domain.png)
