@@ -60,4 +60,4 @@ There are enough version and type fields to (mostly seamlessly) transition to ot
 
 ## Inspirations
 
-The concepts behind Mycoria are inspired by previous work on the [Safing Privacy Network](https://github.com/safing/spn) as well as the [cjdns](https://github.com/cjdelisle/cjdns/) network.
+The concepts behind Mycoria are inspired by previous work on the [Safing Privacy Network](https://github.com/safing/spn) as well as from the [cjdns](https://github.com/cjdelisle/cjdns/) network.
