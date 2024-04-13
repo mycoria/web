@@ -21,12 +21,12 @@ Mycoria is an open and secure overlay network that connects all participants. It
 
 - ==Automatic end-to-end encryption==
 - Modern cryptography
-- Smart and scalable routing (partly WIP)
+- Smart and scalable routing
+- Dashboard
 - Resolve .myco DNS (OS configuration required)
-- Rotating private addresses (WIP)
-- Dashboard (WIP)
+- Simple Service Discovery
 - Auto-Optimization/Healing of Network (for Internet overlay) (WIP)
-- Simple Service Discovery (WIP)
+- Rotating private addresses (WIP)
 
 [Continue reading about the concept.](/concept/)
 
