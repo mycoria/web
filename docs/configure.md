@@ -89,12 +89,33 @@ router:
 system:
   # Define the name of the tun interface.
   tunName: Mycoria
- 
+
+  # Set a custom MTU for the tun interface.
+  # Values not accepted by your OS will prevent Mycoria from starting.
+  tunMTU: 9000
+
+  # Disables the TUN device, cutting of Mycoria from the network of the device.
+  # Useful for relay only routers.
+  disableTUN: true
+
+  # Set a custom IP and port for the API to listen on.
+  # By default it listens on the internal Mycoria IP fd00::b909.
+  apiListen: "127.0.0.1:80"
+
   # Define where and how to store the router state.
   # Must end with one of:
   # .json
   # .sqlite - coming soon (WIP)
   statePath: /home/user/.mycoria/state.json
+
+  # Chromium has a mechanism that disables IPv6 DNS queries if no IPv6
+  # connectivity is detected. This prevents any Chromium-based browser from
+  # sending IPv6 DNS queries to Mycoria for DNS resolution.
+  # Mycoria uses the same check for IPv6 connectivity, and will add a fake
+  # route to 2001:4860:4860::8888/128 in order to get Chromium to send IPv6 DNS
+  # queries.
+  # You can disable that behavior with this flag. 
+  disableChromiumWorkaround: true
 
 # By default, no incoming traffic from Mycoria
 # to your device is allowed by the router.
