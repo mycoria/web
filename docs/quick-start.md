@@ -18,15 +18,8 @@ _Or, [build from source](https://github.com/mycoria/mycoria?tab=readme-ov-file#b
 ### Generate Config
 
 ``` sh
-mycoria config generate XX # Replace XX with your country code.
+mycoria config generate
 ```
-
-!!! info "Why does Mycoria need my country code?"
-
-    It's a vital part of the scalable routing concept.  
-    [Read more about it here.](/concept/#scalable-routing)
-    
-    If you pick an incorrect one, it will undermine _your_ routing performance.
 
 ### Run it!
 

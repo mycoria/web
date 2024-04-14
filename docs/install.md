@@ -42,7 +42,7 @@ wget https://github.com/mycoria/mycoria/releases/latest/download/mycoria_linux_a
 chmod +x /opt/mycoria/mycoria
 
 # Generate config file.
-/opt/mycoria/mycoria config generate XX | tee /opt/mycoria/config.yaml # Replace XX with your country code.
+/opt/mycoria/mycoria config generate | tee /opt/mycoria/config.yaml
 
 # Install and enable systemd service
 curl https://raw.githubusercontent.com/mycoria/mycoria/master/packaging/mycoria.service | sudo tee /etc/systemd/system/mycoria.service
@@ -51,6 +51,9 @@ systemctl start mycoria # Start now.
 journalctl -fu mycoria # Live-view logs.
 
 # Check status
+# Open Dashboard in Browser: http://[fd00::b909]
+
+# Or, check status with curl:
 # View router ID and version
 curl [fd00::b909]
 # View routing table
