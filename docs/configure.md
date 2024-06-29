@@ -63,10 +63,16 @@ router:
   listen:
   - tcp:47369
 
-# Enable the router to choose automatically to which other
+  # Enable the router to choose automatically to which other
   # routers it connects. Routers will optimize their connections
   # based on measurements and estimated location.
   autoConnect: true
+
+	# Specify the minimum amount of connections that the router
+	# should automatically connect to in order to improve network flow.
+	# Enables autoConnect if defined.
+	# Minimum is 1, Defaults to 2.
+	minAutoConnect: 5
 
   # If no other routers with public IANA IPs are known,
   # connect to one of these to bootstrap.
