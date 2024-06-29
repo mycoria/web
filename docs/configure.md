@@ -3,7 +3,9 @@
 If you do not have a config file yet, get the default config, including an ID, with:
 
 ``` sh
-mycoria config generate XX # Replace XX with your country code.
+mycoria config generate # Auto-detect country using reallyfreegeoip.org.
+# or
+mycoria config generate XX # Replace XX with your country code. (US needs state: eg. US-DC)
 ```
 
 !!! info "Why does Mycoria need my country code?"

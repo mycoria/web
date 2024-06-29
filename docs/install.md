@@ -21,7 +21,7 @@ Invoke-WebRequest -Uri "https://github.com/mycoria/mycoria/releases/latest/downl
 # Invoke-WebRequest -Uri "https://github.com/mycoria/mycoria/releases/latest/download/mycoria_windows_arm64.exe" -OutFile "mycoria.exe"
 
 # Generate config file.
-.\mycoria.exe config generate XX | Tee-Object -FilePath "config.yaml" # Replace XX with your country code.
+.\mycoria.exe config generate | Tee-Object -FilePath "config.yaml"
 
 # Install and enable systemd service
 # WIP...
