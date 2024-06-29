@@ -31,14 +31,15 @@ Invoke-WebRequest -Uri "https://github.com/mycoria/mycoria/releases/latest/downl
 
     Mycoria requires WinTun. [Download it here](https://www.wintun.net/) and place `wintun.dll` in the same directory as mycoria.exe
 
-### Linux (amd64, arm64)
+### Linux (amd64, arm64, armv7)
 
 ``` sh
 # Create directory and download binary.
 mkdir /opt/mycoria
 wget https://github.com/mycoria/mycoria/releases/latest/download/mycoria_linux_amd64 -O /opt/mycoria/mycoria
-# Or, download arm64 version:
-# wget https://github.com/mycoria/mycoria/releases/latest/download/mycoria_linux_arm64 -O /opt/mycoria/mycoria
+# Or, download for a different architecture:
+# arm64: wget https://github.com/mycoria/mycoria/releases/latest/download/mycoria_linux_arm64 -O /opt/mycoria/mycoria
+# armv7: wget https://github.com/mycoria/mycoria/releases/latest/download/mycoria_linux_armv7 -O /opt/mycoria/mycoria
 chmod +x /opt/mycoria/mycoria
 
 # Generate config file.
