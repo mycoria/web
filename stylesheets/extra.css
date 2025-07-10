@@ -1,0 +1,42 @@
+/* Docs: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ */
+
+/* Color variables */
+:root {
+  /* Primary color shades */
+  --md-primary-fg-color:               #2d2c28;
+  --md-primary-bg-color:               #c6c6c4;
+
+  /* Accent color shades */
+  --md-accent-fg-color:                #9eb62c;
+  --md-accent-bg-color:                #4c7d5e;
+
+  /* Default color shades */
+  --md-default-fg-color:               #2c2b27;
+  --md-default-bg-color:               #f8f7f2;
+
+  /* Link color */
+  --md-typeset-a-color:              var(--md-accent-bg-color);
+
+  /* Mark color */
+  --md-typeset-mark-color:           #9fb62c69;
+
+  /* Code Blocks & Syntax Highlighting */
+  --md-code-fg-color: #c6c6c4;
+  --md-code-fg-color--light: #9c9a9a;
+  --md-code-bg-color: #2d2c28;
+  --md-code-hl-color: #2977ff;
+  --md-code-hl-color--light: #2977ff1a;
+  --md-code-hl-number-color: #e6695b;
+  --md-code-hl-special-color: #f06090;
+  --md-code-hl-function-color: #c973d9;
+  --md-code-hl-constant-color: #9383e2;
+  --md-code-hl-keyword-color: #6791e0;
+  --md-code-hl-string-color: #2fb170;
+  --md-code-hl-name-color:             var(--md-code-fg-color);
+  --md-code-hl-operator-color:         var(--md-code-fg-color--light);
+  --md-code-hl-punctuation-color:      var(--md-code-fg-color--light);
+  --md-code-hl-comment-color:          var(--md-code-fg-color--light);
+  --md-code-hl-generic-color:          var(--md-code-fg-color--light);
+  --md-code-hl-variable-color:         var(--md-code-fg-color--light);
+}
+
