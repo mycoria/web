@@ -61,7 +61,7 @@ router:
   - "tcp://example.org"
 
   # Define on which ports (and protocols) the router listens.
-  # Currently on tcp is supported, more will come. (WIP)
+  # Currently only tcp is supported, more will come. (WIP)
   listen:
   - tcp:47369
 
